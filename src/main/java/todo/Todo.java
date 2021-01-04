@@ -28,10 +28,6 @@ public class Todo {
         newTodo.sendKeys(title + Keys.ENTER);
     }
 
-    public List<WebElement> getList(){
-        return list;
-    }
-
     public WebElement count(){
         return driver.findElement(By.cssSelector(".todo-count"));
     }

@@ -11,7 +11,7 @@ public class CompleteTodoTest extends BaseTest{
         todo.markCompleted("Read Book");
 
         Assert.assertTrue(todo.count().getText().contains("0 items left"));
-        Assert.assertTrue(todo.getList().stream().allMatch(el -> el.getAttribute("class").contains("completed")));
+        Assert.assertTrue(todo.list.stream().allMatch(el -> el.getAttribute("class").contains("completed")));
     }
 
 }

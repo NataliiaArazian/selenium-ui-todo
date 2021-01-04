@@ -22,7 +22,7 @@ public class CheckTodoCategoriesTest extends BaseTest{
         todo.selectActiveTodos();
 
         Assert.assertEquals(todo.list.size(), 1);
-        Assert.assertTrue(todo.getList().get(0).getText().contains("Do your homework"));
+        Assert.assertTrue(todo.list.get(0).getText().contains("Do your homework"));
     }
 
     @Test
@@ -33,6 +33,6 @@ public class CheckTodoCategoriesTest extends BaseTest{
         todo.selectCompletedTodos();
 
         Assert.assertEquals(todo.list.size(), 1);
-        Assert.assertTrue(todo.getList().get(0).getText().contains("Read Book"));
+        Assert.assertTrue(todo.list.get(0).getText().contains("Read Book"));
     }
 }
