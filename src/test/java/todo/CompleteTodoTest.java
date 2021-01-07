@@ -1,12 +1,13 @@
 package todo;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class CompleteTodoTest extends BaseTest{
 
     @Test
-    public void shouldMarkTodoItemAsCompleted() throws Exception {
+    public void shouldMarkTodoItemAsCompleted() throws NoSuchElementException {
         todo.create("Read Book");
         todo.markCompleted("Read Book");
 

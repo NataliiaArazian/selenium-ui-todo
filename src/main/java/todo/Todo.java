@@ -32,10 +32,10 @@ public class Todo {
         return driver.findElement(By.cssSelector(".todo-count"));
     }
 
-    public void markCompleted(String title) throws Exception {
+    public void markCompleted(String title) throws NoSuchElementException {
 
         WebElement todoWithText = list.stream().filter(el -> el.getText().contains(title))
-                .findFirst().orElseThrow(() -> new Exception("Element not found - " + title));
+                .findFirst().orElseThrow(() -> new NoSuchElementException("Element not found - " + title));
         WebElement parent = (WebElement) ((JavascriptExecutor) driver).executeScript(
                 "return arguments[0].parentNode;", todoWithText);
 

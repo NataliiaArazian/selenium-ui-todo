@@ -1,12 +1,13 @@
 package todo;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class CheckTodoCategoriesTest extends BaseTest{
 
     @Test
-    public void shouldReturnAllTodoCategories() throws Exception {
+    public void shouldReturnAllTodoCategories() throws NoSuchElementException {
         todo.create("Read Book");
         todo.create("Do your homework");
         todo.markCompleted("Read Book");
@@ -15,7 +16,7 @@ public class CheckTodoCategoriesTest extends BaseTest{
     }
 
     @Test
-    public void shouldReturnActiveTodoCategories() throws Exception {
+    public void shouldReturnActiveTodoCategories() throws NoSuchElementException {
         todo.create("Read Book");
         todo.create("Do your homework");
         todo.markCompleted("Read Book");
@@ -26,7 +27,7 @@ public class CheckTodoCategoriesTest extends BaseTest{
     }
 
     @Test
-    public void shouldReturnCompleteTodoCategories() throws Exception {
+    public void shouldReturnCompleteTodoCategories() throws NoSuchElementException {
         todo.create("Read Book");
         todo.create("Do your homework");
         todo.markCompleted("Read Book");
